@@ -1,0 +1,215 @@
+<html>
+    <head>
+        <title>Rarely Used CSS Properties</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+        <style>
+            .navbar{
+                background: #EEE;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+
+            .column-rule-example {
+                columns: 3;
+                column-rule: solid 3px #FF9900;
+            }
+            
+            .background-example {
+                background-image: url("bg.jpg");
+                width: 350px;
+                height: 350px;
+                margin: 10px;
+                background-color: #ccc;
+            }
+            .background-repeat {
+                background-repeat: repeat;
+            }
+            .background-space {
+                background-repeat: space;
+            }
+            .background-repeat-x {
+                background-repeat: repeat-x;
+            }
+            .background-repeat-y {
+                background-repeat: repeat-y;
+            }
+            .background-round{
+                background-repeat: round;
+            }
+
+            li {
+                color: #444;
+                font-size: 20px;
+            }
+            li::marker {
+                color: #FF9900;
+            }
+
+            .display-inline-flex{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .margin-auto-flex-parent{
+                display: flex;
+                background-image: url("bg.jpg");
+                background-repeat: round;
+                width: 400px;
+                height: 400px;
+            }
+            .margin-auto-flex-child {
+                margin: auto;
+                background: #000;
+                opacity: 0.8;
+                width: 200px;
+                height: 200px;
+            }
+
+            .image {
+                width: 200px;
+                height: 300px;
+                background-color: #CCC;
+            }
+            .contain {
+                object-fit: contain;
+            }
+            .cover {
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Rarely Used CSS Properties</a>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>The Column-Rule Property</h1>
+                    <p>CSS columns is a layout method which can divide an element into columns. A common usecase is to divide a paragraph text into two or more columns. The interesting bit is that we can add borders between the columns. The column-rule property name might not reflect it's purpose, but you can imagine it as a border right!</p>
+                </div>
+                <div class="col-md-12">
+                    <h3>Example</h3>
+                    <p class="column-rule-example">Pie marshmallow cheesecake pie toffee chocolate. Donut dragée gummies cake donut danish tiramisu chocolate cake. Dessert sweet lollipop liquorice powder chocolate cake cake. Chocolate cake cheesecake macaroon caramels jelly-o gingerbread lemon drops. Chupa chups liquorice jelly beans tootsie roll candy canes. Wafer toffee powder sweet marshmallow jelly carrot cake halvah. Ice cream jujubes danish gingerbread tart oat cake pastry jujubes muffin. Lemon drops fruitcake carrot cake cupcake chocolate cake. Cotton candy chupa chups cookie sugar plum brownie halvah cheesecake toffee cake. Sugar plum wafer brownie shortbread chocolate bar jujubes brownie halvah pastry. Danish candy cheesecake tart topping jujubes marshmallow cheesecake chocolate. Sweet roll croissant gingerbread wafer sugar plum. Tiramisu jelly pie tootsie roll jelly beans. Jelly sweet roll pie chocolate cake gummi bears cheesecake powder toffee. Muffin lollipop cheesecake oat cake croissant. Tiramisu chocolate lollipop shortbread apple pie powder cheesecake. Marshmallow oat cake topping pudding donut topping toffee. Oat cake sugar plum gummies candy marzipan chocolate cake chocolate gummies. Apple pie carrot cake chupa chups fruitcake caramels candy canes oat cake gingerbread marzipan. Chupa chups marzipan muffin chocolate bar apple pie icing pie. Gummi bears macaroon candy jelly topping. Dragée sweet roll cake lollipop jelly beans. Cupcake shortbread wafer cake halvah tootsie roll topping. Cookie chocolate candy canes dragée chocolate bar cake cotton candy. Gingerbread muffin gingerbread powder pudding.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Background Repeat Round</h1>
+                    <p>This property repeats the background in both directions but it never crops the image unless a single image is too large to fit. If multiple tiles can fit, it squishes or stretches appropriately.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Repeat Example</h3>
+                    <div class="background-example background-repeat"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Repeat Example</h3>
+                    <div class="background-example background-space"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Repeat X Example</h3>
+                    <div class="background-example background-repeat-x"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Repeat Y Example</h3>
+                    <div class="background-example background-repeat-y"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Repeat Round Example</h3>
+                    <div class="background-example background-round"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Styling List Markers</h1>
+                    <p>It’s a perfectly reasonable to want to style the marker of list items. You know: blue bullets with black text in an unordered list. Or red counters with knockout white numbers in an ordered list.</p>
+                </div>
+                <div class="col-md-12">
+                    <h3>Example</h3>
+                    <ul>
+                        <li>Item A</li>
+                        <li>Item B</li>
+                        <li>Item C</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Display: inline-flex</h1>
+                    <p>Useful for displaying inline elements with flex functionality.</p>
+                </div>
+                <div class="col-md-12">
+                    <h3>Example</h3>
+                    <div>
+                        <span class="display-inline-flex"><i class="bi bi-text-left"></i></span>
+                        <span class="display-inline-flex"><i class="bi bi-text-center"></i></span>
+                        <span class="display-inline-flex"><i class="bi bi-text-right"></i></span>
+                        <span class="display-inline-flex"><i class="bi bi-text-indent-left"></i></span>
+                        <span class="display-inline-flex"><i class="bi bi-text-indent-right"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Object Fit</h1>
+                    <p>Object fit is used to specify how an img or video should be resized to fit it's container. </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Example: No Object Fit</h3>
+                    <img src="img.jpg" class="image contain" />
+                </div>
+                <div class="col-md-4">
+                    <h3>Example: Cover</h3>
+                    <img src="img.jpg" class="image cover" />
+                </div>
+                <div class="col-md-4">
+                    <h3>Example: Contain</h3>
+                    <img src="img.jpg" class="image contain" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Margin: Auto with Flexbox</h1>
+                    <p>Combined with flexbox, margin: auto can easily center a flex item horizontally and vertically</p>
+                </div>
+                <div class="col-md-12">
+                    <h3>Example</h3>
+                    <div class="margin-auto-flex-parent">
+                        <div class="margin-auto-flex-child"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
